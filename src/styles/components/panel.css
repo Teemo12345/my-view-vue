@@ -1,0 +1,10 @@
+.panel{
+  border: 1px solid #ddd;
+  & .panel-header{
+    padding:14px 16px;
+    border-bottom:1px solid #ddd;
+  }
+  & .panel-body{
+    padding:16px;
+  }
+}

@@ -1,0 +1,36 @@
+@import "../custom.css";
+.alert{
+  padding: 8px 16px;
+  display: flex;
+  opacity: 1;
+  margin-bottom:10px;
+  position:relative;
+  &.alert-default{
+    background-color:#e2e2e2;
+    color:#333;
+  }
+  &.alert-success{
+    background-color:color(var(--success-color) lightness(85%));
+    color:var(--success-color);
+  }
+  &.alert-warning{
+    background-color:color(var(--warning-color) lightness(90%));
+    color:var(--warning-color);
+  }
+  &.alert-danger{
+    background-color:color(var(--danger-color) lightness(90%));
+    color:var(--danger-color);
+  }
+  &.alert-info{
+    background-color:color(var(--info-color) lightness(90%));
+    color:var(--info-color);
+  }
+  & .alert__content{display: flex;flex-direction: column;padding:0 8px;}
+  & .alert__title{
+    font-weight: 700;
+  }
+  & .alert__desc{
+    margin:0;
+  }
+  & .alert__icon{font-size:16px;line-height: 18px;}
+}

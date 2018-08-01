@@ -3,9 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import MyUI from '../src/index'
+import '@@/styles/index.css'
+import '@fortawesome/fontawesome-free/css/all.css'
 
+Vue.use(MyUI)
 Vue.config.productionTip = false
-
+// console.log(Vue)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

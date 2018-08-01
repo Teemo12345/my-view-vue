@@ -6,7 +6,10 @@
       tr(v-for="tr in thead")
         th(:colspan="th.colspan" :rowspan="th.rowspan" v-for="(th, index) in tr")
           div
-            span(v-if="!th.renderHeader") {{th.title}}
+            div(v-if="th.pie")
+              span {{th.title}}
+              i.icon(@click="showPie(th.title)") pie
+            span(v-else-if="!th.renderHeader") {{th.title}}
             render-header(v-else :column="th" :index="index" :render="th.renderHeader")
 </template>
 <script>
@@ -18,6 +21,11 @@ export default {
     thead: Array,
     tableStyle: Object
   },
-  components: {renderHeader}
+  components: {renderHeader},
+  methods: {
+    showPie (title) {
+      this.$parent.showPie(title)
+    }
+  }
 }
 </script>

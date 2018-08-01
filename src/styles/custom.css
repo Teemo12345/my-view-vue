@@ -1,0 +1,21 @@
+:root{
+  /*Base*/
+  --body-background        : #fff;
+  --font-family            : "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  --title-color            : #1c2438;
+  --text-color             : #495060;
+  --font-size-base         : 14px;
+  --font-size-small        : 12px;
+  --line-height-base       : 1.5;
+  --border-radius-base     : 6px;
+  --border-radius-small    : 4px;
+  --cursor-disabled        : not-allowed;
+  /*color*/
+  --primary-color          : #337ab7;
+  --success-color          : #5cb85c;
+  --info-color             : #5bc0de;
+  --warning-color          : #f0ad4e;
+  --danger-color           : #d9534f;
+  --link-color             : #337ab7;
+  --border-default-color   : #ddd;
+}

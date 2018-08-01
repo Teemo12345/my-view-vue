@@ -106,6 +106,9 @@ export default {
     },
     handScrollTop (e, ref) {
       this.$refs[ref].scrollTop = e.target.scrollTop
+    },
+    showPie (title) {
+      this.$emit('show-pie', title)
     }
   },
   watch: {

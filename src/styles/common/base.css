@@ -1,0 +1,9 @@
+@import './normalize.css';
+html{
+  font-family: var(--font-family);
+  font-size:var(--font-size-small);
+  color:var(--text-color);
+  line-height: var(--line-height-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

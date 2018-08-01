@@ -1,0 +1,28 @@
+.message{
+  position: fixed;
+  top:16px;
+  z-index: 1100;
+  left:50%;
+  display: flex;
+  /*justify-content: center;*/
+  background:#fff;
+  box-shadow: 0px 1px 5px 0px rgba(6, 6, 6, 0.27);
+  padding:10px 14px;
+  display: flex;
+  transform: translateX(-50%);
+  min-width: 300px;
+  & .message-content{
+    align-items: center;
+    & .icon-close{top:11px}
+  }
+}
+.msg-fade-enter,
+.msg-fade-leave-active
+{
+  opacity: 0;
+  transform: translate(-50%, -150%);
+}
+.msg-fade-enter-active,
+.msg-fade-leave-active {
+  transition: opacity .5s linear,transform .2s linear;
+}
