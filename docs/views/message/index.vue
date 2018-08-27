@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     showMsg (type) {
-      this.$message({type, message: '默认提示消息', position: '30%'})
+      this.$message({type, message: '默认提示消息', position: '0%', timeout: 10000})
     }
   },
   mounted () {

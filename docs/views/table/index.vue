@@ -5,6 +5,7 @@
         input(type="checkbox" :name="checkbox.label" v-model="checkbox.show" @change="checkChange")
         span {{checkbox.label}}
     Table(width="100px" height="500px" :theads="columns" :data="data" @show-pie="showPie")
+    div(style="height:1000px;background:#ccc;")
 </template>
 <script>
 import Table from '@/components/table'

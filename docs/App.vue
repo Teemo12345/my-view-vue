@@ -3,6 +3,7 @@
     header.layout-header header
     .layout
       aside.layout-aside
+        //- div {{num}}
         nav
           router-link.btn.btn-link(:to="path.path" v-for="(path, key) in pages" :key="key") {{path.name}}
       main.layout-main.p-20
@@ -16,7 +17,13 @@ export default {
   name: 'App',
   data () {
     return {
-      pages
+      pages,
+      num: 0
+    }
+  },
+  methods: {
+    showNum (e) {
+      this.num = e.target.scrollTop
     }
   },
   mounted () {
@@ -39,5 +46,6 @@ export default {
       &.router-link-active{background-color:#337ab7;color:#fff;}
     }
   }
+  & main.layout-main{overflow: auto;}
 }
 </style>

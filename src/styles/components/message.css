@@ -13,6 +13,7 @@
   min-width: 300px;
   & .message-content{
     align-items: center;
+    & > i.fa + * {margin-left:5px;}
     & .icon-close{top:11px}
   }
 }

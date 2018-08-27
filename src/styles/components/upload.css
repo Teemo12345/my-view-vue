@@ -1,0 +1,4 @@
+.upload-wrap{
+  display:inline-block;
+  & .upload-file{display: none;}
+}

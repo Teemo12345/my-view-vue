@@ -12,12 +12,13 @@
       span
 </template>
 <script>
+import utils from '../utils'
 export default {
   name: 'Alert',
   props: {
     type: {
       validator: function (value) {
-        return ['default', 'success', 'warning', 'danger', 'info'].includes(value)
+        return utils.isType(value)
       },
       default: 'default'
     },

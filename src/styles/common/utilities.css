@@ -199,7 +199,22 @@
     padding-bottom: 50px
 }
 // i.icon-circle-info{border-radius: 10px;padding:3px;}
-i.icon-circle{
+.info{
+  color:var(--info-color)
+}
+.success{
+  color:var(--success-color)
+}
+.warning{
+  color:var(--warning-color)
+}
+.danger{
+  color:var(--danger-color)
+}
+.default{
+  color:var(--default-color)
+}
+.icon-circle{
   border-radius: 10px;
   width: 16px;
   height: 16px;

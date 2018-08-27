@@ -1,8 +1,10 @@
 <template lang="pug">
   transition(name="msg-fade")
-    .message(v-if="show" :style="style")
+    .message(v-if="show" :style="style" :class="type")
       .message-content
-        i.icon-circle(:class="type") i
+        i.fa(:class="[{'fa-check-circle':type === 'success'},{'fa-exclamation-circle':type === 'warning'},{'fa-times-circle':type === 'danger'},{'fa-lightbulb':type === 'default'},{'fa-info-circle':type === 'info'}]")
+        //- .icon-circle(:class="type")
+          i.fa.fa-
         span {{message}}
         i.icon-close(@click="close")
           span
@@ -17,7 +19,9 @@ export default {
       message: '',
       show: false,
       type: 'info',
-      position: '0%'
+      position: '0%',
+      timer: null,
+      timeout: 3000
       // style: `z-index: ${zIndex++}; top: ${top}px`
     }
   },
@@ -30,17 +34,22 @@ export default {
     close () {
       this.show = false
       if (top > 50) top-=50
+      if (this.timer) this.clearTime()
     },
     startTime () {
-      setTimeout(() => {
+      this.timer = setTimeout(() => {
         this.close()
-      }, 3000);
+      }, this.timeout)
+    },
+    clearTime () {
+      clearTimeout(this.timer)
     }
   },
   mounted () {
     this.startTime()
     top+=50
     zIndex++
+    console.log(this.timeout)
   }
 }
 </script>
