@@ -7,6 +7,8 @@ import msg from './message'
 import notice from './notice'
 import scroll from './scroll'
 import upload from './upload'
+import progress from './progress'
+import Pagination from './pagination'
 export {
   home,
   table,
@@ -16,5 +18,7 @@ export {
   msg,
   notice,
   scroll,
-  upload
+  upload,
+  progress,
+  Pagination
 }

@@ -2,9 +2,13 @@ import Alert from './components/alert'
 import Message from './components/message'
 import Notice from './components/notice'
 import Upload from './components/upload'
+import Progress from './components/progress'
+import Pagination from './components/pagination'
 const components = {
   Alert,
-  Upload
+  Upload,
+  Progress,
+  Pagination
 }
 const install = (Vue, opts = {}) => {
   Object.keys(components).forEach(key => {

@@ -1,0 +1,33 @@
+.pagination{
+  & ul {
+    padding:0;
+    margin:0;
+    & li {
+      list-style: none;
+      display: inline-block;
+      margin:5px;
+      & > a{
+        display:block;
+        border:1px solid #ccc;
+        // height:32px;
+        min-width:32px;
+        box-sizing: border-box;
+        // line-height: 1;
+        text-align: center;
+        padding: 5px;
+        &:hover,
+        &.active{
+          color:#2d8cf0;
+          border-color:#2d8cf0;
+          cursor: pointer;
+        }
+        &.disabled{
+          border-color: #ccc;
+          color:#ccc;
+          cursor: no-drop;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}

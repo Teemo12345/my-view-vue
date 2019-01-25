@@ -33,7 +33,7 @@ export default {
   methods: {
     close () {
       this.show = false
-      if (top > 50) top-=50
+      if (top > 50) top -= 50
       if (this.timer) this.clearTime()
     },
     startTime () {
@@ -47,7 +47,7 @@ export default {
   },
   mounted () {
     this.startTime()
-    top+=50
+    top += 50
     zIndex++
     console.log(this.timeout)
   }

@@ -46,7 +46,7 @@ export default {
     }
   },
   methods: {
-    close() {
+    close () {
       this.visible = false
       if (top > 16) {
         top -= this.offsetHeight
@@ -54,11 +54,11 @@ export default {
       if (this.timer) clearTimeout(this.timer)
       if (this.onClose) this.onClose(this)
     },
-    startTime() {
+    startTime () {
       if (this.timeout > 0) {
         this.timer = setTimeout(() => {
           this.close()
-        }, this.timeout);
+        }, this.timeout)
       }
     }
   },
